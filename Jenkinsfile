@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh "ls -ltr"
+                sh "pwd"
+                sh "cd /root/test"
                 sh "docker-compose up -d"
             }
         }
