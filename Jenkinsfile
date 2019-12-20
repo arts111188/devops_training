@@ -1,9 +1,11 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:7-alpine' }
+    }
     stages {
         stage('Test') {
             steps {
-                sh "docker run --name=test-mysql --env="MYSQL_ROOT_PASSWORD=mypassword" mysql"
+                sh 'node --version'
             }
         }
     }
