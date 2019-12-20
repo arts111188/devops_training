@@ -12,6 +12,6 @@ services:
     ports:
     - "3306:3306"
   stockmanager:
-    image: shekhar/stockmanager
+    image: centos
     ports:
     - "8030:8030"
