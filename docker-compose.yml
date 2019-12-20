@@ -4,9 +4,6 @@ services:
     image: nginx
     ports:
     - "8010:8010"
-    links:
-    - productcatalogue
-    - stockmanager
   productcatalogue:
     image: mysql
     ports:
