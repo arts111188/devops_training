@@ -14,7 +14,6 @@ pipeline {
               assert props.key == 'value'
        }      
     }
-}
         stage('Deploy') {
             steps {
                sh 'sudo ./deploy.sh'
