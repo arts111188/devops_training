@@ -9,9 +9,9 @@ pipeline {
         }
         stage('Create folde'){
            steps {
-           folder('project-a') {
-           displayName('Project A')
-           description('Folder for project A')
+              def props = readJSON text: '{ "key": "value" }'
+              assert props['key'] == 'value'
+              assert props.key == 'value'
        }      
     }
 }
