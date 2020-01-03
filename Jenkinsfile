@@ -1,4 +1,3 @@
-def fileName = "testfile" 
 pipeline {
     agent any
    
