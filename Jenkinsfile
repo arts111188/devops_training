@@ -5,7 +5,6 @@ pipeline {
             steps {
                 echo 'Hello, Maven'
                 echo 'bobo'
-                echo 'hohoho'
              }
         }
     }
