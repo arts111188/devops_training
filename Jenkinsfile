@@ -31,8 +31,6 @@ pipeline {
                    def closure = ''
                    read_file.each { String env ->
                    println env
-                // def lineNo = line
-                // println lineNO
               }
             }
        }
