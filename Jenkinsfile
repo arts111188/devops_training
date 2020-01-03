@@ -1,4 +1,4 @@
-pipeline {
+def fileName = "testfile" pipeline {
     agent {label 'Linux'}
    
     parameters {
@@ -31,6 +31,8 @@ pipeline {
                    def closure = ''
                    read_file.each { String env ->
                    println env
+                // def lineNo = line
+                // println lineNO
               }
             }
        }
