@@ -4,7 +4,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Hello, Maven'
-            }
+                echo 'bobo'
+             }
         }
     }
 }
