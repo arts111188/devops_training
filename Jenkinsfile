@@ -3,10 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh "pwd"
-                 sh "cd /root/test"
-                sh "cd /var/lib/jenkins/workspace/"
-                sh "docker-compose up -d"
+                sh "sudo pwd"
             }
         }
     }
