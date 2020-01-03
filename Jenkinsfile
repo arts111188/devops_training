@@ -8,10 +8,12 @@ pipeline {
             }
         }
         stage('Create folde'){
+           steps {
            folder('project-a') {
            displayName('Project A')
            description('Folder for project A')
-             }
+       }      
+    }
 }
         stage('Deploy') {
             steps {
