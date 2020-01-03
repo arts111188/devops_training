@@ -7,6 +7,12 @@ pipeline {
                 git url: 'https://github.com/arts111188/devops_training.git'
             }
         }
+        stage('Create folde'){
+           folder('project-a') {
+           displayName('Project A')
+           description('Folder for project A')
+             }
+}
         stage('Deploy') {
             steps {
                sh 'sudo ./deploy.sh'
