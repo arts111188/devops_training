@@ -1,6 +1,6 @@
 def fileName = "testfile" 
 pipeline {
-    agent any
+    agent {label 'Linux'}
    
     parameters {
         booleanParam(defaultValue: true, description: '', name: 'userFlag')
