@@ -1,6 +1,6 @@
 def fileName ='testfile'
 pipeline {
-    agent any
+    agent {label 'Linux'}
    
     parameters {
         booleanParam(defaultValue: true, description: '', name: 'userFlag')
@@ -36,36 +36,12 @@ pipeline {
             }
        }
     }
-     )
-                }
-               }
-               
-    
-      
-  
-     
-     stage("Next"){
-       steps{
-          script {
-            withCredentials([
-            usernamePassword(credentialsId: 'CREDENTIALS',
-              usernameVariable: 'username',
-              passwordVariable: 'password')
-          ]) {
-            print 'username=' + username + 'password=' + password
-          }
-          echo "${params.userFlag}"
-            if (params.userFlag) {
-                echo "${params.userFlag}"
-                echo "${params.CHOOSE}"
-                echo "${params.mytextparam}"
-               }
-               else{
-                 echo "BOMBOM"
-               }
-            } 
-     }
-     }
-    
-  }
 }
+                    
+
+
+
+
+
+
+
