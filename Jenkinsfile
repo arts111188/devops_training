@@ -1,3 +1,4 @@
+def fileName = 'testfile'
 pipeline {
     agent {label 'Linux'}
    
