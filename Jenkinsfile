@@ -13,7 +13,7 @@ pipeline {
           steps {
             parallel(
                a: {
-                   git branch: 'master',
+                   git branch: 'newbranch',
                    credentialsId: 'CREDENTIALS',
                    url: 'https://github.com/arts111188/devops_training.git'
                   },
