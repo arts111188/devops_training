@@ -1,4 +1,3 @@
-def fileName ='testfile'
 pipeline {
     agent {label 'Linux'}
    
@@ -33,16 +32,40 @@ pipeline {
                    read_file.each { String env ->
                    println env
               }
-)
             }
        }
     }
+     )
+                }
+               }
+               
+    
+      
+  
+     
+     stage("Next"){
+       steps{
+          script {
+            withCredentials([
+            usernamePassword(credentialsId: 'CREDENTIALS',
+              usernameVariable: 'username',
+              passwordVariable: 'password')
+          ]) {
+            print 'username=' + username + 'password=' + password
+          }
+          echo "${params.userFlag}"
+            if (params.userFlag) {
+                echo "${params.userFlag}"
+                echo "${params.CHOOSE}"
+                echo "${params.mytextparam}"
+               }
+               else{
+                 echo "BOMBOM"
+               }
+            } 
+     }
+     }
+    
+  }
 }
-                    
-
-
-
-
-
-
 
