@@ -33,6 +33,7 @@ pipeline {
                    read_file.each { String env ->
                    println env
               }
+)
             }
        }
     }
