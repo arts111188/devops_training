@@ -1,6 +1,6 @@
 def fileName = 'testfile'
 pipeline {
-    agent {label 'Linux'}
+    agent any
    
     parameters {
         booleanParam(defaultValue: true, description: '', name: 'userFlag')
@@ -62,6 +62,8 @@ pipeline {
                }
                else{
                  echo "BOMBOM"
+               ansiblePlaybook(inventory: '/root/ansible_test/inventories/prod/hosts', playbook: 'test.yml')
+
                }
             } 
      }
