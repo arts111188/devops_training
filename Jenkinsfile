@@ -62,7 +62,8 @@ pipeline {
                }
                else{
                  echo "BOMBOM"
-                 sh "sudo cd /root/ansible"
+                 sh "cd /root/ansible"
+                 sh "pwd"
                  ansiblePlaybook(inventory: '/root/ansible_test/inventories/prod/hosts', playbook: 'test.yml')
 
                }
