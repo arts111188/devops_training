@@ -1,6 +1,6 @@
 def fileName = 'testfile'
 pipeline {
-    agent {label 'Linux'}
+    agent any
    
     parameters {
         booleanParam(defaultValue: true, description: '', name: 'userFlag')
@@ -13,7 +13,7 @@ pipeline {
           steps {
             parallel(
                a: {
-                   git branch: 'master',
+                   git branch: 'newbranch',
                    credentialsId: 'CREDENTIALS',
                    url: 'https://github.com/arts111188/devops_training.git'
                   },
@@ -62,6 +62,10 @@ pipeline {
                }
                else{
                  echo "BOMBOM"
+                 sh "cd /root/ansible"
+                 sh "pwd"
+                 //ansiblePlaybook(inventory: '/root/ansible_test/inventories/prod/hosts', playbook: 'test.yml')
+
                }
             } 
      }
