@@ -64,7 +64,7 @@ pipeline {
                  echo "BOMBOM"
                  sh "cd /root/ansible"
                  sh "pwd"
-                 ansiblePlaybook(inventory: '/root/ansible_test/inventories/prod/hosts', playbook: 'test.yml')
+                 //ansiblePlaybook(inventory: '/root/ansible_test/inventories/prod/hosts', playbook: 'test.yml')
 
                }
             } 
