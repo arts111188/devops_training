@@ -28,8 +28,7 @@ pipeline {
                    read_file = readFile("${fileName}_new.txt").readLines()
                    println read_file
                    sh 'pwd'
-                   def firstLine =''
-                   def closure = ''
+
                    read_file.each { String env ->
                    println env
               }
@@ -70,7 +69,12 @@ pipeline {
             } 
      }
      }
-    
+        post {
+            always {
+                archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+                junit 'build/reports/**/*.xml'
+            }
+        }
   }
 }
 
