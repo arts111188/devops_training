@@ -20,7 +20,7 @@ pipeline {
                   },
                b: {
                 script {
-                   barev.printHello(tototo)
+                   hello.printHello(tototo)
                    writeFile file: "${fileName}.txt", text: "${params.userFlag}\n${params.CHOOSE}\n"
                    newVar = sh (script: 'ls -lah',returnStdout: true).trim()
                    echo "Git committer email: ${newVar}"
