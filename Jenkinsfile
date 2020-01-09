@@ -1,5 +1,5 @@
 @Library('my-shared-library') _
-evenOrOdd(currentBuild.getNumber())
+hello(currentBuild.getNumber())
 def fileName = 'testfile'
 pipeline {
     agent any
@@ -21,7 +21,6 @@ pipeline {
                   },
                b: {
                 script {
-                   hello.printHello()
                    writeFile file: "${fileName}.txt", text: "${params.userFlag}\n${params.CHOOSE}\n"
                    newVar = sh (script: 'ls -lah',returnStdout: true).trim()
                    echo "Git committer email: ${newVar}"
