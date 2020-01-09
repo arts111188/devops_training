@@ -1,4 +1,5 @@
-@Library('my-shared-library')
+@Library('my-shared-library') _
+evenOrOdd(currentBuild.getNumber())
 def fileName = 'testfile'
 pipeline {
     agent any
