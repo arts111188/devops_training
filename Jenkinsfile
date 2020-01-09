@@ -17,6 +17,7 @@ pipeline {
                    git branch: 'newbranch',
                    credentialsId: 'CREDENTIALS',
                    url: 'https://github.com/arts111188/devops_training.git'
+                   barev.printHello()
                   },
                b: {
                 script {
