@@ -1,3 +1,4 @@
+@Library('my-shared-library')
 def fileName = 'testfile'
 pipeline {
     agent any
