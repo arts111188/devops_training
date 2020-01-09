@@ -17,11 +17,10 @@ pipeline {
                    git branch: 'master',
                    credentialsId: 'CREDENTIALS',
                    url: 'https://github.com/arts111188/devops_training.git'
-                   barev.printHello(tototo)
                   },
                b: {
                 script {
-               
+                   barev.printHello(tototo)
                    writeFile file: "${fileName}.txt", text: "${params.userFlag}\n${params.CHOOSE}\n"
                    newVar = sh (script: 'ls -lah',returnStdout: true).trim()
                    echo "Git committer email: ${newVar}"
