@@ -17,7 +17,7 @@ pipeline {
                    git branch: 'master',
                    credentialsId: 'CREDENTIALS',
                    url: 'https://github.com/arts111188/devops_training.git'
-                   barev.printHello()
+                   barev.printHello(tototo)
                   },
                b: {
                 script {
